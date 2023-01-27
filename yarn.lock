@@ -13443,6 +13443,11 @@ loader-utils@^1.1.0, loader-utils@^1.2.3, loader-utils@^1.4.0:
     emojis-list "^3.0.0"
     json5 "^1.0.1"
 
+locale-en-us@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/locale-en-us/-/locale-en-us-0.0.2.tgz#11eb4ad8f2b33430ee24a74c4d206377f827aedb"
+  integrity sha512-I02W/LK36C1IDloiFY4ZvK7kIs4C92vCHVEI01rIrJPzzlqcn1NnUxn5d1oiq0pe6JwuzpWwSCYnV0o1WAQP9g==
+
 locate-path@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-3.0.0.tgz#dbec3b3ab759758071b58fe59fc41871af21400e"

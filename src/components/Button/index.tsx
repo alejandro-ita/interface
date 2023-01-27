@@ -185,6 +185,35 @@ export const ButtonSecondary = styled(BaseButton)`
   }
 `
 
+//padding: ${({ padding }) => (padding ? padding : '10px')};
+export const ButtonTelegrm = styled(BaseButton)`
+  border: 3px solid ${({ theme }) => theme.deprecated_primaryBix};
+  color: ${({ theme }) => theme.deprecated_accentActionBix};
+  background-color: transparent;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 10px;
+
+  &:focus {
+    box-shadow: 0 0 0 1pt ${({ theme }) => theme.deprecated_primaryBix};
+    border: 3px solid ${({ theme }) => theme.deprecated_secondaryBixtor};
+  }
+  &:hover {
+    border: 3px solid ${({ theme }) => theme.deprecated_secondaryBixtor};
+  }
+  &:active {
+    box-shadow: 0 0 0 1pt ${({ theme }) => theme.deprecated_primaryBix};
+    border: 3px solid ${({ theme }) => theme.deprecated_secondaryBixtor};
+  }
+  &:disabled {
+    opacity: 50%;
+    cursor: auto;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+`
+
 export const ButtonOutlined = styled(BaseButton)`
   border: 1px solid ${({ theme }) => theme.backgroundOutline};
   background-color: transparent;

@@ -12,11 +12,12 @@ import { HashRouter } from 'react-router-dom'
 import store from 'state'
 import ThemeProvider from 'theme'
 
-import catalog from './locales/en-US'
+//import catalog from './locales/en-US'
+//import catalog from './locales/en-ES'
 
-i18n.load({
+/*i18n.load({
   [DEFAULT_LOCALE]: catalog.messages,
-})
+})*/
 i18n.loadLocaleData({
   [DEFAULT_LOCALE]: { plurals: en },
 })

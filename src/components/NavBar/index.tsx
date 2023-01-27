@@ -1,18 +1,17 @@
 import { Trans } from '@lingui/macro'
 import { useWeb3React } from '@web3-react/core'
-import Web3Status from 'components/Web3Status'
+import { ButtonTelegrm } from 'components/Button'
 import { chainIdToBackendName } from 'graphql/data/util'
 import { useIsNftPage } from 'hooks/useIsNftPage'
 import { Box } from 'nft/components/Box'
 import { Row } from 'nft/components/Flex'
-import { UniIcon } from 'nft/components/icons'
 import { ReactNode } from 'react'
 import { NavLink, NavLinkProps, useLocation, useNavigate } from 'react-router-dom'
+//import Web3Status from 'components/Web3Status'
 import styled from 'styled-components/macro'
 
 import { Bag } from './Bag'
 import { ChainSelector } from './ChainSelector'
-import { MenuDropdown } from './MenuDropdown'
 import { SearchBar } from './SearchBar'
 import * as styles from './style.css'
 
@@ -87,7 +86,7 @@ const Navbar = () => {
         <Box display="flex" height="full" flexWrap="nowrap">
           <Box className={styles.leftSideContainer}>
             <Box className={styles.logoContainer}>
-              <UniIcon
+              {/*<BixIcon
                 width="48"
                 height="48"
                 data-testid="uniswap-logo"
@@ -98,36 +97,40 @@ const Navbar = () => {
                     search: '?intro=true',
                   })
                 }}
-              />
+              />*/}
+              <img src="./images/okko_cabeza.png"  width='60px' height='60px'/>
+             
+            </Box>
+            <Box>
+              <label style={styles.titiLogo}>OkkoSwap</label>
             </Box>
             {!isNftPage && (
               <Box display={{ sm: 'flex', lg: 'none' }}>
                 <ChainSelector leftAlign={true} />
               </Box>
             )}
-            <Row gap={{ xl: '0', xxl: '8' }} display={{ sm: 'none', lg: 'flex' }}>
+            {/*<Row gap={{ xl: '0', xxl: '8' }} display={{ sm: 'none', lg: 'flex' }}>
               <PageTabs />
             </Row>
+            */}
           </Box>
-          <Box className={styles.searchContainer}>
-            <SearchBar />
-          </Box>
+          <Box className={styles.searchContainer}>{/*<SearchBar />*/}</Box>
           <Box className={styles.rightSideContainer}>
             <Row gap="12">
               <Box position="relative" display={{ sm: 'flex', xl: 'none' }}>
                 <SearchBar />
               </Box>
-              <Box display={{ sm: 'none', lg: 'flex' }}>
-                <MenuDropdown />
-              </Box>
+              <Box display={{ sm: 'none', lg: 'flex' }}>{/*<MenuDropdown />*/}</Box>
               {isNftPage && <Bag />}
-              {!isNftPage && (
-                <Box display={{ sm: 'none', lg: 'flex' }}>
-                  <ChainSelector />
-                </Box>
-              )}
-
+              {!isNftPage && <Box display={{ sm: 'none', lg: 'flex' }}>{/*<ChainSelector />*/}</Box>}
+              <ButtonTelegrm variant="contained" color="primary" padding="50">
+                <img src="../images/telegram.png" height="30px" width="30px" />
+                &nbsp; Telegram
+              </ButtonTelegrm>
+              {/*
+              para poner el boton de conectar conwallet en el encabezado
               <Web3Status />
+              */}
             </Row>
           </Box>
         </Box>

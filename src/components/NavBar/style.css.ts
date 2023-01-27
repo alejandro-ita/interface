@@ -3,6 +3,8 @@ import { style } from '@vanilla-extract/css'
 import { subhead } from '../../nft/css/common.css'
 import { sprinkles, vars } from '../../nft/css/sprinkles.css'
 
+
+
 export const logoContainer = style([
   sprinkles({
     display: 'flex',
@@ -54,6 +56,22 @@ export const rightSideContainer = style([
     justifyContent: 'flex-end',
   }),
 ])
+
+export const titiLogo = {
+  color: 'white',
+  padding: '10px',
+  fontFamily: 'Orbitron',
+  fontSize: '36px',
+  fontWeight: '100',
+  letterSpacing: '1px',
+}
+
+export const cmdTelegram = {
+  color: 'white',
+  backgroundColor: 'DodgerBlue',
+  padding: '10px',
+  fontFamily: 'Orbitron',
+}
 
 const baseMenuItem = style([
   subhead,

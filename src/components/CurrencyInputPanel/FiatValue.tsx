@@ -51,7 +51,7 @@ export function FiatValue({
   }, [isLoading, fiatValue])
 
   return (
-    <ThemedText.DeprecatedBody fontSize={14} color={theme.textSecondary}>
+    <ThemedText.DeprecatedWhite fontSize={14} color={theme.white}>
       {showLoadingPlaceholder ? (
         <FiatLoadingBubble />
       ) : (
@@ -67,6 +67,6 @@ export function FiatValue({
           )}
         </div>
       )}
-    </ThemedText.DeprecatedBody>
+    </ThemedText.DeprecatedWhite>
   )
 }

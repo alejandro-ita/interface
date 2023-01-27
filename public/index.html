@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
 
-    <title>Uniswap Interface</title>
+    <title>okkoswap.com</title>
     <meta name="description" content="Swap or provide liquidity on the Uniswap Protocol" />
 
     <!--
@@ -29,11 +29,16 @@
 
     <link rel="preconnect" href="https://www.google-analytics.com/" />
 
-    <link rel="preload" href="%PUBLIC_URL%/fonts/Inter-roman.var.woff2" as="font" type="font/woff2" crossorigin />
+    <!--<link rel="preload" href="%PUBLIC_URL%/fonts/Inter-roman.var.woff2" as="font" type="font/woff2" crossorigin />-->
+
+    <link rel="preload" href="%PUBLIC_URL%/fonts/Orbitron-Regular.ttf" as="font" type="font/ttf" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;800;900&display=swap" rel="stylesheet">
 
     <style>
       * {
-        font-family: 'Inter', sans-serif;
+        /*font-family: 'Inter', sans-serif;*/
+        font-family: 'Orbitron', sans-serif;
         box-sizing: border-box;
       }
 
@@ -41,7 +46,8 @@
           Explicitly load Inter var from public/ so it does not block LCP's critical path.
         */
       @font-face {
-        font-family: 'Inter custom';
+        /*font-family: 'Inter custom';*/
+        font-family: 'Orbitron', sans-serif;
         font-weight: 100 900;
         font-style: normal;
         font-display: block;
@@ -53,7 +59,8 @@
 
       @supports (font-variation-settings: normal) {
         * {
-          font-family: 'Inter custom', sans-serif;
+          /*font-family: 'Inter custom', sans-serif;*/
+          font-family: 'Orbitron', sans-serif;
         }
       }
 
@@ -78,6 +85,7 @@
 
       #background-radial-gradient {
         background: linear-gradient(180deg, #202738 0%, #070816 100%);
+        /*background:#4C82FB;*/
         position: fixed;
         top: 0;
         left: 0;
@@ -93,6 +101,10 @@
       body,
       #root {
         min-height: 100%;
+      }
+
+      body{
+        background-color: #0096FF;
       }
 
       @media (prefers-color-scheme: dark) {

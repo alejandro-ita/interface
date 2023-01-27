@@ -78,7 +78,7 @@ const ArrowContainer = styled.div`
 
 const SwapSection = styled.div`
   position: relative;
-  background-color: ${({ theme }) => theme.backgroundModule};
+  background-color: ${({ theme }) => theme.backgroundModuleSwap};
   border-radius: 12px;
   padding: 16px;
   color: ${({ theme }) => theme.textSecondary};
@@ -99,7 +99,7 @@ const SwapSection = styled.div`
     height: 100%;
     pointer-events: none;
     content: '';
-    border: 1px solid ${({ theme }) => theme.backgroundModule};
+    border: 1px solid ${({ theme }) => theme.backgroundModuleSwap};
   }
 
   &:hover:before {
@@ -596,7 +596,14 @@ export default function Swap({ className }: { className?: string }) {
                   />
                 </Trace>
               </SwapSection>
-              <ArrowWrapper clickable={isSupportedChain(chainId)}>
+            </div>
+            <br></br>
+            <br></br>
+            <div style={{display: 'flex',justifyContent: 'center',alignItems: 'center'}}>
+              <div style={{transform: 'translate(0, -10%)', width: '40%'}}>
+                <hr style={{border: '0px',height: '0px',borderTop: '1px solid rgba(0, 0, 0, 0.1)', borderBottom: '1px solid rgba(255, 255, 255,0.2)'}}/>
+              </div>
+              <ArrowWrapper clickable={isSupportedChain(chainId)}>              
                 <TraceEvent
                   events={[BrowserEvent.onClick]}
                   name={EventName.SWAP_TOKENS_REVERSED}
@@ -609,6 +616,7 @@ export default function Swap({ className }: { className?: string }) {
                     }}
                     color={theme.textPrimary}
                   >
+                    
                     <ArrowDown
                       size="16"
                       color={
@@ -618,7 +626,13 @@ export default function Swap({ className }: { className?: string }) {
                   </ArrowContainer>
                 </TraceEvent>
               </ArrowWrapper>
+              <div style={{transform: 'translate(0, -10%)', width: '40%'}}>
+                <hr style={{border: '0px',height: '0px',borderTop: '1px solid rgba(0, 0, 0, 0.1)', borderBottom: '1px solid rgba(255, 255, 255,0.2)'}}/>
+              </div>
+              
             </div>
+            <br></br>
+            <br></br>
             <AutoColumn gap="md">
               <div>
                 <OutputSwapSection showDetailsDropdown={showDetailsDropdown}>
@@ -667,6 +681,8 @@ export default function Swap({ className }: { className?: string }) {
                   </DetailsSwapSection>
                 )}
               </div>
+              <br></br>
+              <br></br>
               {showPriceImpactWarning && <PriceImpactWarning priceImpact={largerPriceImpact} />}
               <div>
                 {swapIsUnsupported ? (
@@ -683,7 +699,9 @@ export default function Swap({ className }: { className?: string }) {
                     element={ElementName.CONNECT_WALLET_BUTTON}
                   >
                     <ButtonLight onClick={toggleWalletModal} fontWeight={600}>
-                      <Trans>Connect Wallet</Trans>
+                      <Trans>Connect to Wallet</Trans>
+                      &nbsp; &nbsp; &nbsp;
+                      <img src="../images/OKKO_FELIZ.png" height="50px" width="40px" />
                     </ButtonLight>
                   </TraceEvent>
                 ) : showWrap ? (
@@ -818,7 +836,7 @@ export default function Swap({ className }: { className?: string }) {
                           <MouseoverTooltip
                             text={
                               <Trans>
-                                Permission is required for Uniswap to swap each token. This will expire after one month
+                                Permission is required for Okkoswap to swap each token. This will expire after one month
                                 for your security.
                               </Trans>
                             }

@@ -160,7 +160,7 @@ const StyledBalanceMax = styled.button<{ disabled?: boolean }>`
   border: none;
   color: ${({ theme }) => theme.accentAction};
   cursor: pointer;
-  font-size: 14px;
+  font-size: 4px;
   font-weight: 600;
   opacity: ${({ disabled }) => (!disabled ? 1 : 0.4)};
   padding: 4px 6px;
@@ -181,6 +181,7 @@ const StyledNumericalInput = styled(NumericalInput)<{ $loading: boolean }>`
   font-size: 36px;
   line-height: 44px;
   font-variant: small-caps;
+  color:${({ theme }) => theme.backgroundBackdrop};
 `
 
 interface SwapCurrencyInputPanelProps {

@@ -8,9 +8,10 @@ import { Z_INDEX } from 'theme/zIndex'
 
 import { AutoColumn } from '../Column'
 
+
 export const PageWrapper = styled.div`
   padding: 68px 8px 0px;
-  max-width: 480px;
+  max-width: 680px;
   width: 100%;
 
   @media only screen and (max-width: ${({ theme }) => `${theme.breakpoint.md}px`}) {
@@ -23,24 +24,31 @@ export const PageWrapper = styled.div`
 `
 
 // Mostly copied from `AppBody` but it was getting too hard to maintain backwards compatibility.
+//background: ${({ theme }) => theme.backgroundSurface};
+//pading interno de la caja azul
+//padding: 8px;
+//border-radius: 16px;
+//border: 1px solid ${({ theme }) => theme.backgroundOutline};
+/*
+ &:hover {
+    border: 1px solid ${({ theme }) => theme.backgroundOutline};
+  }
+*/
+//background: ${({ theme }) => theme.backgroundSurface};
 export const SwapWrapper = styled.main`
   position: relative;
   background: ${({ theme }) => theme.backgroundSurface};
-  border-radius: 16px;
-  border: 1px solid ${({ theme }) => theme.backgroundOutline};
-  padding: 8px;
+  border-radius: 50px;
+  border: 1px solid ;
+  padding: 60px;
   z-index: ${Z_INDEX.deprecated_content};
   transition: transform 250ms ease;
-
-  &:hover {
-    border: 1px solid ${({ theme }) => theme.backgroundOutline};
-  }
 `
 
 export const ArrowWrapper = styled.div<{ clickable: boolean }>`
-  border-radius: 12px;
-  height: 40px;
-  width: 40px;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
   position: relative;
   margin-top: -18px;
   margin-bottom: -18px;
@@ -48,7 +56,7 @@ export const ArrowWrapper = styled.div<{ clickable: boolean }>`
   margin-right: auto;
   background-color: ${({ theme }) => theme.backgroundInteractive};
   border: 4px solid;
-  border-color: ${({ theme }) => theme.backgroundSurface};
+  border-color: ${({ theme }) => theme.backgroundInteractive};  
 
   z-index: 2;
   ${({ clickable }) =>

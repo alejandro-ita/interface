@@ -38,7 +38,8 @@ import WalletModal from '../WalletModal'
 import MetamaskConnectionError from './MetamaskConnectionError'
 
 // https://stackoverflow.com/a/31617326
-const FULL_BORDER_RADIUS = 9999
+const FULL_BORDER_RADIUS = 10
+//const FULL_BORDER_RADIUS = 9999
 
 const ChevronWrapper = styled.button`
   background-color: transparent;

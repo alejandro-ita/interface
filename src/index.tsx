@@ -28,6 +28,7 @@ import TransactionUpdater from './state/transactions/updater'
 import UserUpdater from './state/user/updater'
 import ThemeProvider, { ThemedGlobalStyle } from './theme'
 import RadialGradientByChainUpdater from './theme/components/RadialGradientByChainUpdater'
+import Swap from 'pages/Swap'
 
 if (window.ethereum) {
   window.ethereum.autoRefreshOnNetworkChange = false

@@ -75,7 +75,7 @@ function getSettings(darkMode: boolean) {
     fonts,
 
     // shadows
-    shadow1: darkMode ? '#000' : '#2F80ED',
+    shadow1: darkMode ? '#000' : '#0096FF',
 
     // media queries
     deprecated_mediaWidth: deprecated_mediaWidthTemplates,

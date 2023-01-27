@@ -3,7 +3,7 @@ import { useLocationLinkProps } from 'hooks/useLocationLinkProps'
 import { useMemo } from 'react'
 import styled from 'styled-components/macro'
 
-import { DEFAULT_LOCALE, LOCALE_LABEL, SupportedLocale } from '../../constants/locales'
+import { DEFAULT_LOCALE, SupportedLocale } from '../../constants/locales'
 import { navigatorLocale, useActiveLocale } from '../../hooks/useActiveLocale'
 import { StyledInternalLink, ThemedText } from '../../theme'
 
@@ -39,9 +39,9 @@ export function SwitchLocaleLink() {
   return (
     <Container>
       <Trans>
-        Uniswap available in:{' '}
+        {/*Uniswap available in :{' '}*/}
         <StyledInternalLink onClick={onClick} to={to}>
-          {LOCALE_LABEL[targetLocale]}
+          {/*{LOCALE_LABEL[targetLocale]}*/}
         </StyledInternalLink>
       </Trans>
     </Container>
